@@ -1,15 +1,17 @@
+@use 'sass:color';
+
 .dark-mode {
-    background-color: darken($grisOscuro, 10);
+    background-color: color.adjust($grisOscuro, $lightness: -10%);
 
     p {
         color: $blanco;
     }
 
-    a, h1,h2,h3,h4  {
+    a, h1, h2, h3, h4 {
         color: $gris;
     }
 
-    .anuncio, 
+    .anuncio,
     .resumen-propiedad {
         background-color: $grisOscuro;
         border: 1px solid $grisOscuro;
@@ -22,11 +24,13 @@
         }
     }
     
-
     .texto-nosotros blockquote {
         color: $blanco;
     }
-   
+    .texto-busva blockquote {
+        color: $blanco;
+    }
+
     .formulario {
         label,
         legend,
@@ -34,7 +38,7 @@
             color: $gris;
         }
 
-        input:not([type="submit"]), 
+        input:not([type="submit"]),
         textarea,
         select {
             background-color: $grisOscuro;
@@ -42,6 +46,4 @@
             color: $blanco;
         }
     }
-
-  
 }

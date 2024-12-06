@@ -1,3 +1,6 @@
+@use 'sass:math';
+@use 'sass:color';
+
 /** Media Queries **/
 @mixin telefono {
     @media (min-width: #{$telefono}) {
@@ -10,31 +13,32 @@
         @content;
     }
 }
-  
+
 @mixin desktop {
     @media (min-width: #{$desktop}) {
         @content;
     }
 }
-@mixin grid($columnas, $espaciado ) {
+
+@mixin grid($columnas, $espaciado) {
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
 
-@mixin boton($bgColor, $display ) {
+@mixin boton($bgColor, $display) {
     background-color: $bgColor;
     color: $blanco;
     font-weight: $bold;
     text-decoration: none;
     padding: 1rem 3rem;
     text-align: center;
-    margin-top: $separacion / 2;
+    margin-top: math.div($separacion, 2);
     display: $display;
     border: none;
 
     &:hover {
-        background-color: darken($bgColor, 5);
+        background-color: color.adjust($bgColor, $lightness: -5%);
         cursor: pointer;
     }
 }

@@ -12,7 +12,7 @@
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="/">
-                    <img src="build/img/logo.svg" alt="Logotipo de Bienes Raices">
+                    <img src="build/img/logowebbusva.png" alt="Logotipo de Bienes Raices">
                 </a>
 
                 <div class="mobile-menu">
@@ -32,76 +32,70 @@
             </div> <!--.barra-->
         </div>
     </header>
-
     <main class="contenedor seccion">
         <h1>Contacto</h1>
-
         <picture>
             <source srcset="build/img/destacada3.webp" type="image/webp">
             <source srcset="build/img/destacada3.jpg" type="image/jpeg">
             <img loading="lazy" src="build/img/destacada3.jpg" alt="Imagen Contacto">
         </picture>
-
-        <h2>Llene el formulario de Contacto</h2>
-
-        <form class="formulario">
+        <h2>Para mas informacin por favor llene el formulario de Contacto (Tambien puede contactar por Whatsapp)</h2>
+        <form id="contactForm" class="formulario" action="https://formspree.io/f/xwpkaoan" method="POST">
+            <!-- Campos del formulario -->
             <fieldset>
                 <legend>Información Personal</legend>
-
                 <label for="nombre">Nombre</label>
-                <input type="text" placeholder="Tu Nombre" id="nombre">
-
+                <input type="text" placeholder="Su Nombre" id="nombre" name="nombre" required>
                 <label for="email">E-mail</label>
-                <input type="email" placeholder="Tu Email" id="email">
-
+                <input type="email" placeholder="Su Email" id="email" name="email" required>
                 <label for="telefono">Teléfono</label>
-                <input type="tel" placeholder="Tu Teléfono" id="telefono">
-
+                <input type="tel" placeholder="Su Teléfono" id="telefono" name="telefono">
                 <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje"></textarea>
+                <textarea id="mensaje" name="mensaje" required></textarea>
             </fieldset>
-
             <fieldset>
                 <legend>Información sobre la propiedad</legend>
-
-                <label for="opciones">Vende o Compra:</label>
-                <select id="opciones">
+                <label for="opciones">zona par comprar:</label>
+                <select id="opciones" name="opciones" required>
                     <option value="" disabled selected>-- Seleccione --</option>
-                    <option value="Compra">Compra</option>
-                    <option value="Vende">Vende</option>
+                    <option value="Ciudad">Jalisco</option>
+                    <option value="Ciudad">Guanajuato</option>
+                    <option value="Ciudad">San Luis Potosi</option>
+                    <option value="Ciudad">Nayarit</option>
                 </select>
-
                 <label for="presupuesto">Precio o Presupuesto</label>
-                <input type="number" placeholder="Tu Precio o Presupuesto" id="presupuesto">
-
+                <select id="presupuesto" name="presupuesto"" required>
+                    <option value="" disabled selected>-- Seleccione --</option>
+                    <option value="rango">De $500,000.00 a $1,000,000.00</option>
+                    <option value="rango">De $1,000,000.00 a $2,000,000.00<</option>
+                    <option value="rango">De $2,000,000.00 a $3,000,000.00<</option>
+                    <option value="rango">De $3,000,000.00 En adelante<</option>
+                </select>
+              
             </fieldset>
-
             <fieldset>
                 <legend>Información sobre la propiedad</legend>
-
                 <p>Como desea ser contactado</p>
-
                 <div class="forma-contacto">
                     <label for="contactar-telefono">Teléfono</label>
                     <input name="contacto" type="radio" value="telefono" id="contactar-telefono">
-
                     <label for="contactar-email">E-mail</label>
                     <input name="contacto" type="radio" value="email" id="contactar-email">
                 </div>
-
-                <p>Si eligió teléfono, elija la fecha y la hora</p>
-
+                <p>Si elige teléfono, elija la fecha y la hora porfavor</p>
                 <label for="fecha">Fecha:</label>
-                <input type="date" id="fecha">
-
+                <input type="date" id="fecha" name="fecha">
                 <label for="hora">Hora:</label>
-                <input type="time" id="hora" min="09:00" max="18:00">
-
+                <input type="time" id="hora" name="hora" min="09:00" max="18:00">
             </fieldset>
-
-            <input type="submit" value="Enviar" class="boton-verde">
+            <input type="submit" value="Enviar por correo" class="boton-verde">
+            
+<!-- Botón de WhatsApp -->
+            <input type="submit" value=" ¡Contácta por WhatsApp !" class="boton-verde"
+            button class="contact-btn" onclick="window.open('https://wa.me/523343340062', '_blank')">
+            
         </form>
-    </main>
+       </main>
 
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">

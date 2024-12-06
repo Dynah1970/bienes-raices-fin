@@ -41,10 +41,9 @@
             content: '';
             display: block;
             width: 15rem;
-            height: .5rem;
+            height: 0.5rem; // Cambiado de .5rem a 0.5rem para consistencia
             background-color: $verde;
             margin-top: 1rem;
         }
     }
-
 }

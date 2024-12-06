@@ -1,3 +1,4 @@
+/* Estilos para los botones */
 .boton-amarillo {
     @include boton($amarillo, inline-block);
 }
@@ -9,3 +10,4 @@
 .boton-verde {
     @include boton($verde, inline-block);
 }
+
