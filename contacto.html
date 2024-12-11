@@ -35,11 +35,13 @@
     <main class="contenedor seccion">
         <h1>Contacto</h1>
         <picture>
-            <source srcset="build/img/destacada3.webp" type="image/webp">
-            <source srcset="build/img/destacada3.jpg" type="image/jpeg">
-            <img loading="lazy" src="build/img/destacada3.jpg" alt="Imagen Contacto">
+            <source srcset="build/img/oficia.webp" type="image/webp">
+            <source srcset="build/img/oficia.png" type="image/jpeg">
+            <img loading="lazy" src="build/img/oficia.png" alt="Imagen Contacto">
         </picture>
         <h2>Para mas informacin por favor llene el formulario de Contacto (Tambien puede contactar por Whatsapp)</h2>
+        <input type="submit" value=" ¡Contácta por WhatsApp !" class="boton-verde"
+            button class="contact-btn" onclick="window.open('https://wa.me/523343340062', '_blank')">
         <form id="contactForm" class="formulario" action="https://formspree.io/f/xwpkaoan" method="POST">
             <!-- Campos del formulario -->
             <fieldset>
@@ -62,6 +64,7 @@
                     <option value="Ciudad">Guanajuato</option>
                     <option value="Ciudad">San Luis Potosi</option>
                     <option value="Ciudad">Nayarit</option>
+                    <option value="Ciudad">Otras zonas del pais</option>
                 </select>
                 <label for="presupuesto">Precio o Presupuesto</label>
                 <select id="presupuesto" name="presupuesto"" required>
@@ -105,8 +108,9 @@
                 <a href="blog.html">Blog</a>
                 <a href="contacto.html">Contacto</a>
             </nav>
+            
         </div>
-
+        <p class="copyright"> 📌Mariano Otero 3429, Verde Valle , Guadalajara.Jal</p> 
         <p class="copyright">Todos los derechos DGM&copy;</p>
     </footer>
 
